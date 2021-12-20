@@ -1,0 +1,1 @@
+{"version":3,"file":"device-model.mock.js","sourceRoot":"","sources":["../../../src/mocks/device/device-model.mock.ts"],"names":[],"mappings":";;;AAAA,yDAAmD;AAEnD,MAAa,eAAe;IAExB,QAAQ,CAAC,EAAU;QACf,OAAO,kCAAe,CAAC,CAAC,CAAC,CAAC;QAC1B,MAAM,MAAM,GAAG,kCAAe,CAAC,CAAC,CAAC,CAAC;QAClC,IAAI,MAAM,CAAC,GAAG,IAAG,EAAE,EAAC;YAChB,OAAO,MAAM,CAAC;SACjB;IACL,CAAC;CAEJ;AAVD,0CAUC"}
