@@ -49,7 +49,13 @@ let DeviceRepository = class DeviceRepository {
         }
     }
     async create(device) {
-        return await new this.model(device).save();
+        try {
+            return await new this.model(device).save();
+        }
+        catch (error) {
+            TypeError(error.message);
+            return null;
+        }
     }
 };
 DeviceRepository = __decorate([

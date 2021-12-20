@@ -39,6 +39,11 @@ export class DeviceRepository {
     }
 
     async create(device: any): Promise<Device> {
-        return await new this.model(device).save();
+        try {
+            return await new this.model(device).save();
+        } catch (error: any) {
+            TypeError(error.message);
+            return null
+        }
     }
 }

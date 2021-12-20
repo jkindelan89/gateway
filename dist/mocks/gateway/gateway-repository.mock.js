@@ -7,10 +7,9 @@ class GatewayRepositoryMock {
         return gateway_data_mock_1.gatewaysMockData;
     }
     findById(id) {
-        const founded = gateway_data_mock_1.gatewaysMockData.find((g, index) => {
+        return gateway_data_mock_1.gatewaysMockData.find((g) => {
             return g._id == id;
         });
-        return founded;
     }
     create(gatewayDTO) {
         const founded = gateway_data_mock_1.gatewaysMockData.find((g, index) => {
