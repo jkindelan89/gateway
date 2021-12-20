@@ -1,0 +1,250 @@
+{
+	"info": {
+		"_postman_id": "74f20155-2572-4f4e-af60-bcd9de2744c7",
+		"name": "gateway",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get all gateways",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://{{host}}/gateway",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"gateway"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get gateway by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://{{host}}/gateway/61bd4b9320d86d11312ba7d0",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"gateway",
+						"61bd4b9320d86d11312ba7d0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add gateway",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"serialNumber\": \"0090\",\r\n\"name\": \"MAC33\",\r\n\"address\": \"1.1.1.1\"\r\n}"
+				},
+				"url": {
+					"raw": "http://{{host}}/gateway",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"gateway"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit gateway",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"serialNumber\": \"12389\",\r\n\"name\": \"123MAC33\",\r\n\"address\": \"1.1.1.1\"\r\n}"
+				},
+				"url": {
+					"raw": "http://{{host}}/gateway/61bd4b9320d86d11312ba7d0",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"gateway",
+						"61bd4b9320d86d11312ba7d0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete gateway",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://{{host}}/gateway/61bf2a599c5f844860ffd3dd",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"gateway",
+						"61bf2a599c5f844860ffd3dd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list device to gateway",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"uid\": \"0085123\",\r\n  \"vendor\": \"MAC33\",\r\n  \"status\": false\r\n}"
+				},
+				"url": {
+					"raw": "http://{{host}}/gateway/61bd50be8bc7208b6ce8abee/device",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"gateway",
+						"61bd50be8bc7208b6ce8abee",
+						"device"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add device to gateway",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"uid\": \"0085123\",\r\n  \"vendor\": \"MAC33\",\r\n  \"status\": false\r\n}"
+				},
+				"url": {
+					"raw": "http://{{host}}/gateway/61bd50be8bc7208b6ce8abee/device",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"gateway",
+						"61bd50be8bc7208b6ce8abee",
+						"device"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit device",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"uid\": \"xxx123\",\r\n  \"vendor\": \"MAC33\",\r\n  \"status\": true\r\n}"
+				},
+				"url": {
+					"raw": "http://{{host}}/device/61beb3997832d59008afb887",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"device",
+						"61beb3997832d59008afb887"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete device",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://{{host}}/device/61beb3997832d59008afb887",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"device",
+						"61beb3997832d59008afb887"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "toogle status device",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://{{host}}/device/61beb3997832d59008afb887/status",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"device",
+						"61beb3997832d59008afb887",
+						"status"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
